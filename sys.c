@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <stdbool.h>
+#include <time.h>
+#include "global.c"
+#include "system.c"
+#include "list.c"
+#include "permutation.c"
+#include "print.c"
+#include "main.c"
