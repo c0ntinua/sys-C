@@ -21,4 +21,13 @@ void rotate_rows(key S, const perm f, const perm g) {
 void rotate_cols(key S, const perm f, const perm g) {
     for (int c = 0; c < C ; c++) shift_col(S, c, c%2 == 0 ? f[(c/2)%B] : g[(c/2)%B] );
 }
+void spin_key(key S, int spins) {
+    perm f = {0}, g = {0}, h ={0}; 
+    for (int i = 0 ; i < spins; i++) {
+        fns_from_key(f,g,S);
+        rotate_rows(S,g,f);
+        rotate_cols(S,f,g);
+    }
+}
+
 
