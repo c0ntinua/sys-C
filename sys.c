@@ -5,7 +5,6 @@
 #include <stdbool.h>
 #include <time.h>
 #include "global.c"
-#include "system.c"
 #include "list.c"
 #include "fn.c"
 #include "key.c"

@@ -1,8 +1,8 @@
 
 
-void encode(int* x, int* y, const key K) {
+void encoded_from_plain(int* y, int* x, const key K) {
     key S;fn f,g,h;
-    copy_key(K,S);
+    copy_from_key(S,K);
     for (int i = 0; i < text_length; i++) {
         fns_from_key(f,g,S);
         composition(h,f,g);
@@ -13,9 +13,9 @@ void encode(int* x, int* y, const key K) {
         rotate_cols(S,g,f); 
     }
 }
-void decode(int* x, int* y, const key K) {
+void plain_from_encoded(int* y, int* x, const key K) {
     key S;fn f,g,h,q;
-    copy_key(K,S);
+    copy_from_key(S,K);
     for (int i = 0; i < text_length; i++) {
         fns_from_key(f, g, S);
         composition(h, f, g);

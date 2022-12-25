@@ -1,7 +1,7 @@
 void inverse(fn q, fn f) {
     for (int i = 0 ; i <  B; i++) q[f[i]] = i;
 }
-void composition(perm h, const fn f, const fn g) {
+void composition(fn h, const fn f, const fn g) {
     for (int i = 0; i < B; i++) h[i] = f[g[i]];
 }
 
@@ -21,7 +21,7 @@ void fn_from_list(fn f, const list L) {
 }
 void fns_from_key(fn f, fn g, key K) {
     list L = {0};
-    list_from_rows(L,K);
+    list_from_key(L,K,true);
     fn_from_list(f,L);
     reverse_list(L);
     fn_from_list(g,L);
