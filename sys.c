@@ -5,6 +5,8 @@
 #include <stdbool.h>
 #include <time.h>
 #include "global.c"
+#include "error.c"
+#include "cursor.c"
 #include "list.c"
 #include "fn.c"
 #include "key.c"
@@ -12,4 +14,5 @@
 #include "print.c"
 #include "encode.c"
 #include "encrypt.c"
+#include "demo.c"
 #include "main.c"

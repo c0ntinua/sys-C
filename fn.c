@@ -16,7 +16,7 @@ void fn_from_list(fn f, const list L) {
     for (int arg = 0 ; arg < B ; arg++) {
         x = value_from_list(L,p++);
         for (;have[x] && p < search_max;) x = value_from_list(L,p++);
-        if (p >= search_max) {printf("\n\n!!! KEY TOO SMALL FOR BASE -- TERMINATING !!!\n\n"); exit(0);}
+        if (p >= search_max) report_small_key();
         have[x] = true;f[arg] = x;
     }
 }
