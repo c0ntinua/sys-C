@@ -1,4 +1,4 @@
-void print_symbol(int s) {s == 0 ? printf("O ") : printf("| ");}
+void print_symbol(int s) {s == 0 ? printf("O") : printf("|");}
 void print_row(const int r[C]) {for (int c =0 ; c < C; c++) print_symbol(r[c]); printf("\n");}
 void print_key(key K) {for (int r = 0; r <  R ; r++) print_row(K[r]); printf("\n");}
 void print_list(int L[R*C]) {for (int i = 0 ; i < R*C; i++) print_symbol(L[i]); printf("\n");}
